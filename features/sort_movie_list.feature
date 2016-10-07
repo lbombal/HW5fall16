@@ -18,12 +18,15 @@ Background: movies have been added to database
   | The Incredibles         | PG     | 5-Nov-2004   |
   | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
   | Chicken Run             | G      | 21-Jun-2000  |
+  
 
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  # your scenario here
+  When I have opted to see movies ordered alphabetically by title
+  Then I should see movies in alphabetical order by title
 
 Scenario: sort movies in increasing order of release date
-  # your scenario here
-
+  When I have opted to see movies ordered by release date
+  Then I should see the movies in order of release date
+  
